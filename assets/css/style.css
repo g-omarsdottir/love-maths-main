@@ -111,6 +111,17 @@ body {
   transition: all 0.5s;
 }
 
+/* Using :: for pseudo-element, as opposed to : for pseudo-selector */
+.btn--big::after {
+  content: attr(data-type);
+  font-size: 1rem;
+  color: #445361;
+  /* to pull things in a bit */
+  position: relative;
+  /* to center under the buttons */
+  left: -0.5em;
+}
+
 .btn--blue {
   border-color: blue;
   color: blue;
